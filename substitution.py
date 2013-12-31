@@ -18,7 +18,7 @@ def encrypt(cleartext, codebook):
 	for w in words:
 		encword = ""
 		for c in w:
-			if c in string.punctuation:
+			if c not in string.lowercase:
 				encword += c
 			else:
 				encword += codebook.get(string.lowercase.index(c), '')
